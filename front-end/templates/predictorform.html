@@ -1,8 +1,31 @@
-<html>
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Cancer Type</title>
+  </head>
+  
    <body>
-      <form action = "http://localhost:9999/resultsform.html" method = "POST">
-         <p>Year <input type = "text" name = "year" /></p>
-         <img src="../static/image.jpeg" width="300">
+      <form action = "http://localhost:9999/predict" method = "POST">
+         <p>Radius Mean <input type = "text" name = "radius_mean" /></p>
+         <p>Texture Mean <input type = "text" name = "texture_mean" /></p>
+         <p>Smoothness Mean <input type = "text" name = "smoothness_mean" /></p>
+         <p>Compactness Mean <input type = "text" name = "compactness_mean" /></p>
+         <p>Symmetry Mean <input type = "text" name = "symmetry_mean" /></p>
+         <p>Fractal Dimension Mean <input type = "text" name = "fractal_dimension_mean" /></p>
+         <p>Radius SE <input type = "text" name = "radius_se" /></p>
+         <p>Texture SE <input type = "text" name = "texture_se" /></p>
+         <p>Smoothness SE <input type = "text" name = "smoothness_se" /></p>
+         <p>Compactness SE <input type = "text" name = "compactness_se" /></p>
+         <p>Symmetry SE <input type = "text" name = "symmetry_se" /></p>
+         <p>Radius Worst <input type = "text" name = "radius_worst" /></p>
+         <p>Texture Worst <input type = "text" name = "texture_worst" /></p>
+         <p>Smoothness Worst <input type = "text" name = "smoothness_worst" /></p>
+         <p>Compactness Worst <input type = "text" name = "compactness_worst" /></p>
+         <p>Symmetry Worst  <input type = "text" name = "symmetry_worst" /></p>
+         <button type="submit" value="Predict">Predict</button>
       </form>
    </body>
 </html>
