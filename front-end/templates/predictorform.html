@@ -3,29 +3,50 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <link href="../static/styles.css" rel="stylesheet">
       <title>Cancer Type</title>
   </head>
   
    <body>
-      <form action = "http://localhost:9999/predict" method = "POST">
-         <p>Radius Mean <input type = "text" name = "radius_mean" /></p>
-         <p>Texture Mean <input type = "text" name = "texture_mean" /></p>
-         <p>Smoothness Mean <input type = "text" name = "smoothness_mean" /></p>
-         <p>Compactness Mean <input type = "text" name = "compactness_mean" /></p>
-         <p>Symmetry Mean <input type = "text" name = "symmetry_mean" /></p>
-         <p>Fractal Dimension Mean <input type = "text" name = "fractal_dimension_mean" /></p>
-         <p>Radius SE <input type = "text" name = "radius_se" /></p>
-         <p>Texture SE <input type = "text" name = "texture_se" /></p>
-         <p>Smoothness SE <input type = "text" name = "smoothness_se" /></p>
-         <p>Compactness SE <input type = "text" name = "compactness_se" /></p>
-         <p>Symmetry SE <input type = "text" name = "symmetry_se" /></p>
-         <p>Radius Worst <input type = "text" name = "radius_worst" /></p>
-         <p>Texture Worst <input type = "text" name = "texture_worst" /></p>
-         <p>Smoothness Worst <input type = "text" name = "smoothness_worst" /></p>
-         <p>Compactness Worst <input type = "text" name = "compactness_worst" /></p>
-         <p>Symmetry Worst  <input type = "text" name = "symmetry_worst" /></p>
-         <button type="submit" value="Predict">Predict</button>
-      </form>
+      <div id="container">
+         <div id="header">
+            <h1>Cheeto Team</h1>
+            <h2>Mukta, Nguyen, Nathan, Jonathan</h2>
+            <h2>Cancer Classification</h2>
+            <img id="cheeto" src="../static/cheeto_circle.png"/>
+         </div>
+         <div id="banner">
+            <form action = "http://localhost:9999/predict" method = "POST" enctype = "multipart/form-data">
+               <div id="column-container">
+                  <div class="column">
+                     <p><label>Radius Mean </label><input type = "text" name = "radius_mean" /></p>
+                     <p><label>Texture Mean </label><input type = "text" name = "texture_mean" /></p>
+                     <p><label>Smoothness Mean </label><input type = "text" name = "smoothness_mean" /></p>
+                     <p><label>Compactness Mean </label><input type = "text" name = "compactness_mean" /></p>
+                     <p><label>Symmetry Mean </label><input type = "text" name = "symmetry_mean" /></p>   
+                     <p><label>Fractal Dimension Mean </label><input type = "text" name = "fractal_dimension_mean" /></p>
+                  </div>
+                  <div class="column">
+                     <p><label>Radius SE </label><input type = "text" name = "radius_se" /></p>
+                     <p><label>Texture SE </label><input type = "text" name = "texture_se" /></p>
+                     <p><label>Smoothness SE </label><input type = "text" name = "smoothness_se" /></p>
+                     <p><label>Compactness SE </label><input type = "text" name = "compactness_se" /></p>
+                     <p><label>Symmetry SE </label><input type = "text" name = "symmetry_se" /></p>
+                  </div>
+                  <div class="column">
+                     <p><label>Radius Worst </label><input type = "text" name = "radius_worst" /></p>
+                     <p><label>Texture Worst </label><input type = "text" name = "texture_worst" /></p>
+                     <p><label>Smoothness Worst </label><input type = "text" name = "smoothness_worst" /></p>
+                     <p><label>Compactness Worst </label><input type = "text" name = "compactness_worst" /></p>
+                     <p><label>Symmetry Worst  </label><input type = "text" name = "symmetry_worst" /></p>   
+                  </div>   
+               </div>
+               <input type = "file" name = "file" accept=".csv" />
+               <div id="submit-container">
+                  <button type="submit" value="Predict">Predict</button>
+               </div>
+            </form>   
+         </div>   
+      </div>
    </body>
 </html>

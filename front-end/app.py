@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
 import pandas as pd
+from werkzeug.utils import secure_filename
 import pickle
 app = Flask(__name__)
 
 @app.route('/')
 def show_predict_stock_form():
     return render_template('predictorform.html')
-@app.route('/predict', methods=['POST'])
 
+@app.route('/predict', methods=['GET', 'POST'])
 def results():
-    form = request.form
     if request.method == 'POST':
       model = pickle.load(open("Logistic-Regression-Model", "rb"))
       Xlabels = ["radius_mean","texture_mean","smoothness_mean","compactness_mean",
@@ -26,8 +26,11 @@ def results():
                25.38,17.33,
                0.1622,0.6656,
                0.4601]
+
       Xdict = {}
       for i in range(len(Xlabels)):
+        # currentValue = request.form[Xlabels[i]]
+        # Xdict[Xlabels[i]] = [currentValue]
         Xdict[Xlabels[i]] = [Xtest[i]]
       X = pd.DataFrame(data=Xdict)
       Y = model.predict(X)
