@@ -1,11 +1,26 @@
 <!doctype html>
 <html>
     <head>
-        <title>Cancer Category</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../static/styles.css" rel="stylesheet">
+        <title>Cancer Type</title>
     </head>
     
     <body>
-        <h3>Cancer Type Result:</h3>
-        <div>{{ cancer_type }}</div>
+        <div id="container">
+            <div id="header">
+               <h1>Cheeto Team</h1>
+               <h2>Mukta, Nguyen, Nathan, Jonathan</h2>
+               <h2>Cancer Classification</h2>
+               <img id="cheeto" src="../static/cheeto_circle.png"/>
+            </div>
+            <div id="banner">
+                <div id="result-container">
+                    <h3>Cancer Type Result:</h3>
+                    <h3>{{ cancer_type }}</h3>    
+                </div>
+            </div>
+        </div>
     </body>
 </html>
