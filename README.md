@@ -7,6 +7,18 @@ There are 3 machine learning models stored in this repository. Our dataset is lo
 To train and test a model, open the Jupyter Notebook for the model type you are interested in and run all the cells in the notebook. This will start the entire training process for that model from scratch, including data import and cleaning, training, testing, and statistics collection. Refer to the output of the cells to see information such as Accuracy, MSE, the ROC Curve, and more. 
 
 ## How to use the demo
+### Required dependencies
+Please check whether you have all required dependencies:
+- flask
+- numpy
+- pandas
+- sklearn
+- pickle
+- matplotlib
+- seaborn
+- imblearn
+
+### Instructions
 - Make sure you are in the [frontend](./front-end) directory.
 - Run `app.py` by `py app.py` (on Windows) or `python app.py` (on Mac).
 - If the server is successfully running, you will be able to access the frontend demo on [localhost:9999](http://localhost:9999) using web browser.
